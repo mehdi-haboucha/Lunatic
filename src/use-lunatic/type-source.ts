@@ -211,11 +211,11 @@ export type ComponentDatePickerType = {
 
 export type ComponentCheckboxGroupType = {
 	componentType: 'CheckboxGroup';
-	responses: {
+	responses: Array<{
 		label: LabelType;
 		response: ResponseType;
 		id: string;
-	}[];
+	}>;
 };
 
 export type ComponentCheckboxBooleanType = {
