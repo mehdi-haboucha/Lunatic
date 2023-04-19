@@ -173,15 +173,53 @@ function createExecuteExpression(
 		return {};
 	}
 
+	// function resolveUseContext(
+	// 	name: string,
+	// 	{
+	// 		iteration,
+	// 		linksIterations,
+	// 	}: { iteration?: number; linksIterations?: number[] }
+	// ) {
+	// 	const value = bindings[name];
+
+	// 	if ([X_AXIS, Y_AXIS].includes(name) && linksIterations !== undefined) {
+	// 		pushToLazy(name);
+	// 		const [x, y] = linksIterations;
+	// 		if (Array.isArray(value) && x < value.length) {
+	// 			return value[name === X_AXIS ? x : y];
+	// 		}
+	// 		return null;
+	// 	}
+	// 	if (iteration !== undefined && Array.isArray(value)) {
+	// 		pushToLazy(name);
+	// 		if (iteration < value.length) {
+	// 			return value[iteration];
+	// 		}
+	// 		return null;
+	// 	}
+	// 	if (linksIterations !== undefined) {
+	// 		const [x, y] = linksIterations;
+	// 		if (Array.isArray(value) && x < value.length) {
+	// 			const sub = value[x];
+	// 			if (Array.isArray(sub) && y < sub.length) {
+	// 				return sub[y];
+	// 			}
+	// 		}
+
+	// 		return null;
+	// 	}
+	// 	return getVtlCompatibleValue(value);
+	// }
 	function resolveUseContext(
 		name: string,
-		{
-			iteration,
-			linksIterations,
-		}: { iteration?: number; linksIterations?: number[] }
-	) {
+		{ iteration, linksIterations }: { iteration?: number; linksIterations?: number[] } = {}
+	): any {
 		const value = bindings[name];
-
+	
+		if (!name || !value) {
+			return null;
+		}
+	
 		if ([X_AXIS, Y_AXIS].includes(name) && linksIterations !== undefined) {
 			pushToLazy(name);
 			const [x, y] = linksIterations;
@@ -190,6 +228,7 @@ function createExecuteExpression(
 			}
 			return null;
 		}
+	
 		if (iteration !== undefined && Array.isArray(value)) {
 			pushToLazy(name);
 			if (iteration < value.length) {
@@ -197,6 +236,7 @@ function createExecuteExpression(
 			}
 			return null;
 		}
+	
 		if (linksIterations !== undefined) {
 			const [x, y] = linksIterations;
 			if (Array.isArray(value) && x < value.length) {
@@ -205,9 +245,9 @@ function createExecuteExpression(
 					return sub[y];
 				}
 			}
-
 			return null;
 		}
+	
 		return getVtlCompatibleValue(value);
 	}
 

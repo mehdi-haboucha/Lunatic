@@ -3,7 +3,7 @@ import { LunaticState } from '../type';
 const compose = <V>(
 	...functions: Array<(acc: LunaticState, action: V) => LunaticState>
 ) => {
-	return functions.reverse().reduce(
+	return functions.reduceRight(
 		function (next, current) {
 			return (state, action) => next(current(state, action), action);
 		},
