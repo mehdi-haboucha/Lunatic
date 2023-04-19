@@ -1,12 +1,12 @@
 import {
 	DeclarationsBeforeText,
 	DeclarationsDetachable,
+	DECLARATION_POSITIONS,
 } from '../../declarations';
 
 import PropTypes from 'prop-types';
 import React, { Fragment } from 'react';
 import * as commonPropTypes from '../../commons/prop-types';
-import { DECLARATION_POSITIONS } from '../../declarations';
 import FieldContainer from './field-container';
 import Label from './label';
 import Missing from './missing';

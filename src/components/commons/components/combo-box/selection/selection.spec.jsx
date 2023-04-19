@@ -1,7 +1,7 @@
 import React from 'react';
-import { render, fireEvent } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import Selection from './selection';
-import { expect, describe, it, vi } from 'vitest';
+import { expect, describe, it } from 'vitest';
 const options = [
 	{ label: 'Apple', value: 'apple' },
 	{ label: 'Orange', value: 'orange' },
