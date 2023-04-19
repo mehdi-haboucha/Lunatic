@@ -1,5 +1,6 @@
 export function composeFilters(...filters) {
-	return filters.reverse().reduce(
+	//reduceRight = .reverse().reduce
+	return filters.reduceRight(
 		function (next, current) {
 			return (tokens, args) => next(current(tokens, args), args);
 		},

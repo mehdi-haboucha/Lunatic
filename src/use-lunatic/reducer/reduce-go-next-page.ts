@@ -142,7 +142,7 @@ function validateChange(state: LunaticState): LunaticState {
 }
 
 function reduceGoNextPage(state: LunaticState): LunaticState {
-	const { pages, isInLoop, pager, variables } = state;
+	const { pages, isInLoop, pager } = state;
 	const { iteration, nbIterations, subPage, nbSubPages, page, roundabout } = {
 		nbSubPages: 0,
 		iteration: 0,

@@ -39,32 +39,6 @@ describe('Panel', () => {
 		});
 	});
 
-	// it('renders the selected option with the "selected" class', () => {
-	// 	render(
-	// 		<Panel
-	// 			optionRenderer={optionRenderer}
-	// 			options={options}
-	// 			focused={false}
-	// 			selectedIndex={1}
-	// 			expended={true}
-	// 			id="test"
-	// 			search=""
-	// 			onSelect={() => {}}
-	// 		/>
-	// 	);
-
-	// 	expect(screen.getByRole('listbox')).toBeInTheDocument();
-
-	// 	options.forEach((option, index) => {
-	// 		const optionElement = screen.getByText(option.value);
-	// 		if (index === 1) {
-	// 			expect(optionElement).toHaveClass('selected');
-	// 		} else {
-	// 			expect(optionElement).not.toHaveClass('selected');
-	// 		}
-	// 	});
-	// });
-
 	it('calls onSelect when an option is clicked', () => {
 		const handleSelect = vi.fn();
 

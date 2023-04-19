@@ -149,7 +149,7 @@ function createExecuteExpression(
 			return dependencies.reduce(function (map, name) {
 				if (name in variables) {
 					const data = variables[name];
-					const { variable, type } = data;
+					const { variable } = data;
 					if (!(name in map)) {
 						if (variable.variableType === 'CALCULATED') {
 							const { expression } = variable;

@@ -29,7 +29,6 @@ function ComboBoxContent({ children, focused, onFocus, onBlur, onKeyDown }) {
 					ref.current.focus();
 					break;
 				default:
-				// e.preventDefault();
 			}
 			onKeyDown(key);
 		},

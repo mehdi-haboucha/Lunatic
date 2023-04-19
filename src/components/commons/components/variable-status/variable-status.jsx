@@ -10,10 +10,6 @@ const VariableStatus = ({ id = '', children }) => {
 		content: [{ key: 'TODO', value: ' coming soon' }],
 	}));
 
-	// useEffect(() => {
-	// 	setTooltipElements({ imgName: 'edited', content: 'toto' });
-	// }, [response]);
-
 	const { content, imgName } = tooltipElements;
 
 	if (!content) return null;

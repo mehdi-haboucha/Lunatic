@@ -4,7 +4,6 @@ import displayLabelOrInput from './displayLabelOrInput';
 import { describe, it, expect } from 'vitest';
 describe('displayLabelOrInput', () => {
 	const MockComponent = ({ value }) => <div>{value}</div>;
-	const WrappedComponent = displayLabelOrInput(MockComponent, 'Input');
 
 	it('should render Memoized component when name is Input and displayLabel is false', () => {
 		const WrappedComponent = displayLabelOrInput(MockComponent, 'Input');

@@ -40,9 +40,7 @@ async function loadSuggesters(suggesters = []) {
 		for (let i = 0; i < suggesters.length; i++) {
 			const suggester = suggesters[i];
 			const { autoLoad } = suggester;
-			function logging(message) {
-				//console.log(name, message);
-			}
+			function logging(message) {}
 			if (autoLoad) {
 				await loadOne(suggester, logging);
 			}

@@ -1,6 +1,5 @@
 import React, { useCallback, useRef, useState } from 'react';
 import IconButton from '@mui/material/IconButton';
-// import ClearIcon from '@mui/icons-material/Clear';
 import InputBase from '@mui/material/InputBase';
 import ClickAwayListener from '@mui/material/ClickAwayListener';
 import Stack from '@mui/material/Stack';
@@ -11,13 +10,6 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Popper from '@mui/material/Popper';
 
-// function getSelection(options, selectedIndex) {
-// 	if (selectedIndex !== undefined) {
-// 		return options[selectedIndex];
-// 	}
-// 	return undefined;
-// }
-
 function SuggesterContainer({
 	children,
 	onKeyDown,
@@ -27,9 +19,6 @@ function SuggesterContainer({
 	onBlur,
 	expended,
 }) {
-	// const handleClickAway = useCallback(function () {
-	// 	onBlur();
-	// }, []);
 	const zIndex = expended ? '1' : '0';
 	return (
 		<ClickAwayListener
@@ -124,32 +113,6 @@ const Selection = React.forwardRef(function Selection(
 		/>
 	);
 });
-
-// const Selection = React.forwardRef(function Selection(
-// 	{ placeholder, onChange, onDelete, value, onFocus },
-// 	ref
-// ) {
-// 	return (
-// 		<Paper
-// 			component="form"
-// 			sx={{
-// 				p: '2px 4px',
-// 				display: 'flex',
-// 				alignItems: 'center',
-// 				width: 'fit-content',
-// 			}}
-// 		>
-// 			<SelectionInput
-// 				value={value}
-// 				placeholder={placeholder}
-// 				onChange={onChange}
-// 				ref={ref}
-// 				onFocus={onFocus}
-// 			/>
-// 			<Delete onClick={onDelete} />
-// 		</Paper>
-// 	);
-// });
 
 function OptionMUI({ label, id, selected, onClick, index }) {
 	const handleClick = useCallback(

@@ -54,13 +54,6 @@
 				width: 100%;
 				.lunatic-suggester-content {
 					/* */
-
-					&.focused {
-						.lunatic-suggester-selection {
-						}
-					}
-
-					/* */
 					.lunatic-suggester-selection {
 						border-radius: 5px;
 						border: 2px solid var(--color-primary-dark);
@@ -167,8 +160,6 @@
 				font-weight: bold;
 				font-size: large;
 				margin-bottom: 3px;
-			}
-			.descrition {
 			}
 		}
 	}
