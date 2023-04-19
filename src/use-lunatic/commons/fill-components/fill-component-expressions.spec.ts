@@ -1,5 +1,4 @@
 import { describe, expect, test } from 'vitest';
-import { VTL } from '../../../utils/constants';
 import fillComponentExpressions from './fill-component-expressions';
 
 describe('fillComponentExpressions', () => {

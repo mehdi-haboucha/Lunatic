@@ -2,7 +2,6 @@ import React from 'react';
 import { render, fireEvent } from '@testing-library/react';
 import ModalControls from './modal-controls';
 import { describe, it, expect, vi } from 'vitest';
-import D from '../../i18n';
 
 describe('ModalControls component', () => {
 	it('should render correctly when there are errors', () => {

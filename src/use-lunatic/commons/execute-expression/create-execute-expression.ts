@@ -12,7 +12,6 @@ import {
 	Y_AXIS,
 } from '../../../utils/constants';
 import { LunaticExpression, LunaticState } from '../../type';
-import { CALCULATED } from '../../../constants';
 
 export type ExpressionLogger = (
 	expression: string | LunaticExpression,

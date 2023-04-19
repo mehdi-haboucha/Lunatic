@@ -1,9 +1,8 @@
 import {
 	DeclarationsBeforeText,
 	DeclarationsDetachable,
+	DECLARATION_POSITIONS,
 } from '../../declarations';
-
-import { DECLARATION_POSITIONS } from '../../declarations';
 import FieldContainer from './field-container';
 import Missing from './missing';
 import PropTypes from 'prop-types';

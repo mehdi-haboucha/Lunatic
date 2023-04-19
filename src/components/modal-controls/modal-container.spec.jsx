@@ -1,6 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { render, screen } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import ModalContainer from './modal-container';
 import { describe, it, expect } from 'vitest';
 
